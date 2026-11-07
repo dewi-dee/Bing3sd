@@ -1,30 +1,171 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Food Fun! | Versi 7 November - Audio & Matching</title>
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Food Fun! | Qiandra Almaheerah Samir</title>
 <style>
-:root{--ink:#302b4a;--purple:#d8c8ff;--pink:#ffd8e9;--yellow:#fff0ac;--green:#c9f3d8;--blue:#ccecff}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,"Trebuchet MS",sans-serif;color:var(--ink);background:linear-gradient(135deg,#9bd8ff,#f9b9df 45%,#ffe48a 80%,#a7f1c3);min-height:100vh}
-main{max-width:1040px;margin:auto;padding:18px}.panel{background:#fffefb;border:3px solid #fff;border-radius:30px;padding:clamp(20px,4vw,42px);box-shadow:0 12px 32px #5b4b9122;min-height:580px;animation:rise .3s}
-h1{font-size:clamp(2.1rem,6vw,3.7rem);margin:12px 0}h2{font-size:clamp(1.5rem,4vw,2.4rem)}p{font-size:1.12rem;line-height:1.55}.tag{display:inline-block;border-radius:99px;background:var(--purple);padding:9px 17px;font-weight:800}
-button,input{font:inherit}button{border:2px solid #4b436a18;border-radius:17px;padding:13px 18px;background:var(--purple);color:var(--ink);font-weight:800;cursor:pointer;transition:transform .15s}button:hover{transform:translateY(-2px)}button:focus-visible,input:focus-visible{outline:3px solid #6d52c3;outline-offset:3px}button:disabled{opacity:.6;cursor:not-allowed}
-.green{background:var(--green)}.pink{background:var(--pink)}.yellow{background:var(--yellow)}.blue{background:var(--blue)}
-.center{text-align:center}.hero{font-size:clamp(4rem,11vw,7rem);margin:15px 0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:22px 0}.tile{border:2px solid #ffffff;box-shadow:0 5px 0 #463e6920;background:var(--blue);border-radius:20px;padding:18px;text-align:center}.tile:nth-child(3n+2){background:var(--pink)}.tile:nth-child(3n){background:var(--yellow)}.icon{font-size:3.5rem;display:block}.tile strong{display:block;margin:8px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;margin-top:25px}.answers{display:grid;gap:12px;margin:20px 0}.answers button{text-align:left;background:var(--blue);font-size:1.13rem}.answers button:nth-child(even){background:var(--pink)}.answers button.good{background:#a9e7b5}.answers button.bad{background:#ffc1c1}
-.feedback{padding:17px;background:var(--yellow);border-radius:20px;margin:15px 0;font-weight:700}.muted{font-size:.94rem;color:#625b75}.big{font-size:1.7rem;font-weight:900}.bar{height:13px;background:#eae5f6;border-radius:20px;overflow:hidden;margin:16px 0}.bar div{height:100%;background:#a78be9;transition:width .3s}input{padding:12px;border:2px solid #b7a4ed;border-radius:14px;max-width:100%}
-.pair{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}.pair button{min-width:125px}.selected{outline:4px solid #7660d7}.done{opacity:.55}.confetti{font-size:3rem;animation:bounce .6s infinite alternate}
-@keyframes rise{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@keyframes bounce{to{transform:translateY(-10px)}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px auto;max-width:590px}.menu-card{min-height:105px;font-size:1.25rem;border:3px solid #ffffff;box-shadow:0 6px 0 #483b6d35}.start-button{display:block;width:100%;max-width:590px;margin:22px auto 0;background:linear-gradient(120deg,#42e48b,#17b9bd);color:#083b39;font-size:clamp(1.1rem,4vw,1.65rem);border:3px solid #128a73;box-shadow:0 7px 0 #126a61}button:active{transform:translateY(3px);box-shadow:none}.panel{background:linear-gradient(155deg,#fffefa,#fff7fd)}@media(max-width:420px){main{padding:9px}.panel{padding:16px;border-radius:22px}.menu-card{min-height:90px}}
+:root{
+  --ink:#2d2650;
+  --purple:#7c5cf8;
+  --light-purple:#f3efff;
+  --pink:#ff6584;
+  --light-pink:#ffe5ec;
+  --yellow:#ffc93c;
+  --light-yellow:#fff9e6;
+  --green:#2ec4b6;
+  --light-green:#e2fcf9;
+  --blue:#3a86ff;
+  --light-blue:#e7f0ff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color:var(--ink);
+  background:linear-gradient(135deg, #bbf2f6 0%, #fbd5e9 50%, #fef3c7 100%);
+  background-attachment: fixed;
+  min-height:100vh;
+}
+main{max-width:1040px;margin:auto;padding:24px 16px}
+.panel{
+  background:#ffffff;
+  border:4px solid #ffffff;
+  border-radius:32px;
+  padding:clamp(24px, 5vw, 48px);
+  box-shadow:0 20px 45px rgba(91, 75, 145, 0.12);
+  min-height:580px;
+  animation:rise .35s ease-out;
+  position:relative;
+  overflow:hidden;
+}
+h1{font-size:clamp(2rem, 5vw, 3.2rem);margin:8px 0 16px;color:#2d2650;font-weight:900}
+h2{font-size:clamp(1.3rem, 3vw, 2rem);color:#3d3566}
+p{font-size:1.12rem;line-height:1.6;color:#4a4468}
+.tag{
+  display:inline-block;
+  border-radius:50px;
+  background:var(--light-purple);
+  color:var(--purple);
+  padding:8px 18px;
+  font-weight:800;
+  font-size:0.9rem;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  box-shadow:0 4px 12px rgba(124, 92, 248, 0.15);
+}
+button,input{font:inherit}
+button{
+  border:none;
+  border-radius:18px;
+  padding:14px 22px;
+  background:var(--purple);
+  color:#fff;
+  font-weight:800;
+  cursor:pointer;
+  transition:all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow:0 6px 0 rgba(0,0,0,0.08);
+}
+button:hover{transform:translateY(-3px);box-shadow:0 9px 0 rgba(0,0,0,0.08)}
+button:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,0.08)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+button:disabled{opacity:.6;cursor:not-allowed;transform:none!important;box-shadow:none!important}
 
-.score-display{font-size:clamp(4.5rem,19vw,9rem);font-weight:1000;line-height:1.1;color:#6843c8;text-shadow:3px 5px 0 #ffe4a0;margin:18px 0;animation:scorePop .65s ease-out}
-.score-total{font-size:clamp(1.3rem,5vw,2rem);font-weight:800}.result-card{background:linear-gradient(135deg,#fff0b0,#ffd4ec 55%,#c7f5e2);padding:24px;border-radius:28px;border:3px solid #fff;box-shadow:0 8px 22px #6c4d8822}
-@keyframes scorePop{0%{transform:scale(.55);opacity:0}75%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+.green{background:var(--green); color:#fff;}
+.pink{background:var(--pink); color:#fff;}
+.yellow{background:var(--yellow); color:#423000;}
+.blue{background:var(--blue); color:#fff;}
 
-.match-board{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(34px,10vw,115px);padding:12px 0 18px;margin:18px 0}.match-column{display:flex;flex-direction:column;gap:18px;min-width:0;position:relative;z-index:2}.match-column h2{text-align:center;font-size:1.1rem;margin:0 0 5px}.match-choice{width:100%;min-height:82px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;background:#e4eaff;border:3px solid #b8a6ef;box-shadow:0 4px 0 #675b9825;position:relative}.match-picture{font-size:2.7rem;background:#fff0b8}.match-word{font-size:clamp(1rem,3.8vw,1.35rem);background:#d9edff}.match-choice.match-active{border-color:#6c48d9;background:#e8dcff;outline:3px solid #a48af1}.match-choice.match-correct{background:#c6f6d1;border-color:#19a65b;color:#135c32;opacity:1}.match-choice.match-error{background:#ffd0d0;border-color:#e24b4b}.match-choice:disabled{opacity:1;cursor:default}.match-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:visible}.match-lines line{stroke-linecap:round;stroke-width:7;filter:drop-shadow(0 2px 1px #ffffff)}.match-lines .line-good{stroke:#1caf5c}.match-lines .line-bad{stroke:#eb4444;stroke-dasharray:11 7}.match-hint{text-align:center;font-weight:700;color:#554b77}.match-feedback{min-height:60px}
-@media(max-width:420px){.match-board{gap:38px}.match-choice{min-height:76px;padding:9px 4px}.match-picture{font-size:2.3rem}}
+.center{text-align:center}
+.hero{font-size:clamp(3.5rem, 9vw, 6rem);margin:10px 0;letter-spacing:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:24px 0}
+.tile{
+  border:3px solid #f0f0f5;
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
+  background:var(--light-blue);
+  border-radius:24px;
+  padding:20px 16px;
+  text-align:center;
+  transition:all 0.2s ease;
+}
+.tile:hover{transform:translateY(-4px);border-color:var(--blue)}
+.tile:nth-child(3n+2){background:var(--light-pink)}
+.tile:nth-child(3n+2):hover{border-color:var(--pink)}
+.tile:nth-child(3n){background:var(--light-yellow)}
+.tile:nth-child(3n):hover{border-color:var(--yellow)}
+.icon{font-size:3.2rem;display:block;margin-bottom:8px}
+.tile strong{display:block;margin-top:6px;font-size:1.1rem;color:#2d2650}
 
-/* Feedback animations and celebration */
-.feedback-pop{animation:popIn .36s ease both}.answers button.good,.match-correct{animation:successPulse .45s ease}.answers button.bad,.match-error{animation:shake .36s ease}.score-display{animation:scoreReveal .85s cubic-bezier(.2,1.5,.4,1) both}.celebration{font-size:2.5rem;letter-spacing:.25rem;animation:floatUp 1.4s ease-in-out infinite alternate}.sound-toggle{position:fixed;right:12px;bottom:12px;z-index:50;background:#fff;border:2px solid #7d60c7;box-shadow:0 3px 14px #0002;padding:10px 13px;font-size:.9rem}.match-lines line{transition:stroke-dashoffset .35s}.match-lines .line-good{stroke-dasharray:1000;stroke-dashoffset:0;animation:drawLine .55s ease-out}.match-complete{background:#c9f3d8;border:2px solid #1caf5c;border-radius:18px;padding:15px;text-align:center;font-weight:900;font-size:1.25rem;animation:popIn .4s ease}
-@keyframes popIn{from{opacity:.5;transform:scale(.88)}to{opacity:1;transform:scale(1)}}@keyframes successPulse{50%{transform:scale(1.035)}}@keyframes shake{20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}@keyframes scoreReveal{from{opacity:0;transform:scale(.4) rotate(-8deg)}to{opacity:1;transform:scale(1) rotate(0)}}@keyframes floatUp{to{transform:translateY(-10px)}}@keyframes drawLine{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
-@media(prefers-reduced-motion:reduce){.feedback-pop,.answers button.good,.answers button.bad,.match-correct,.match-error,.score-display,.celebration,.match-lines .line-good{animation:none!important}}
-</style></head><body><main><section class="panel" id="screen" aria-live="polite"></section></main><button id="soundToggle" class="sound-toggle" onclick="toggleSound()" aria-pressed="true">🔊 Suara ON</button><script>
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;margin-top:30px;align-items:center}
+.answers{display:grid;gap:14px;margin:24px 0}
+.answers button{
+  text-align:left;
+  background:var(--light-blue);
+  color:#1e3a8a;
+  font-size:1.15rem;
+  border:2px solid #b7d1ff;
+  border-radius:18px;
+  padding:16px 20px;
+}
+.answers button:nth-child(even){background:var(--light-pink);color:#831843;border-color:#ffb6c1}
+.answers button.good{background:#d1fae5!important;color:#065f46!important;border-color:#34d399!important}
+.answers button.bad{background:#fee2e2!important;color:#991b1b!important;border-color:#f87171!important}
+
+.feedback{padding:18px 22px;background:var(--light-yellow);border:2px solid #fde68a;border-radius:20px;margin:20px 0;font-weight:700;color:#78350f}
+.muted{font-size:.95rem;color:#6b7280}
+.big{font-size:1.6rem;font-weight:900;color:#1e1b4b}
+.bar{height:14px;background:#f3f4f6;border-radius:20px;overflow:hidden;margin:18px 0;box-shadow:inset 0 2px 4px rgba(0,0,0,0.05)}
+.bar div{height:100%;background:var(--purple);border-radius:20px;transition:width .4s ease}
+input{padding:14px 18px;border:2px solid #e5e7eb;border-radius:16px;max-width:100%;width:100%;font-size:1.1rem;background:#fafafa;transition:all 0.2s}
+input:focus{border-color:var(--purple);background:#fff;box-shadow:0 0 0 4px rgba(124, 92, 248, 0.15)}
+
+.pair{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.pair button{min-width:100px;padding:10px 14px;font-size:0.9rem}
+.selected{outline:4px solid var(--purple)}
+.done{opacity:.55}
+
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px auto;max-width:600px}
+.menu-card{min-height:115px;font-size:1.2rem;border:3px solid #ffffff;box-shadow:0 8px 20px rgba(100,80,150,0.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.start-button{display:block;width:100%;max-width:600px;margin:24px auto 0;background:linear-gradient(135deg,#10b981,#059669);color:#fff;font-size:clamp(1.1rem, 4vw, 1.4rem);border-radius:20px;box-shadow:0 8px 0 #047857}
+
+.sound-toggle{position:fixed;right:16px;bottom:16px;z-index:50;background:#fff;border:2px solid var(--purple);color:var(--purple);box-shadow:0 6px 20px rgba(0,0,0,0.1);padding:12px 18px;font-size:.95rem;border-radius:50px;font-weight:800}
+
+.score-display{font-size:clamp(4.5rem,18vw,8.5rem);font-weight:1000;line-height:1;color:var(--purple);text-shadow:4px 4px 0 #ffe066;margin:16px 0;animation:scorePop .7s cubic-bezier(0.175, 0.885, 0.32, 1.275) both}
+.score-total{font-size:clamp(1.2rem,4vw,1.8rem);font-weight:800;color:#374151}
+.result-card{background:linear-gradient(135deg,#fffbeb,#fdf2f8 50%,#ecfdf5);padding:28px;border-radius:28px;border:3px solid #fff;box-shadow:0 12px 30px rgba(108, 77, 136, 0.08)}
+
+.match-board{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px, 8vw, 100px);padding:16px 0;margin:16px 0}
+.match-column{display:flex;flex-direction:column;gap:16px;min-width:0;position:relative;z-index:2}
+.match-column h2{text-align:center;font-size:1.15rem;margin:0 0 6px;color:#4b5563}
+.match-choice{width:100%;min-height:85px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;background:#eef2ff;border:3px solid #c7d2fe;box-shadow:0 4px 12px rgba(0,0,0,0.03);position:relative;border-radius:20px;color:#1e1b4b}
+.match-picture{font-size:2.8rem;background:#fef3c7;border-color:#fde68a}
+.match-word{font-size:clamp(1rem,3.5vw,1.3rem);background:#eff6ff;border-color:#bfdbfe}
+.match-choice.match-active{border-color:var(--purple);background:#f3e8ff;outline:3px solid #d8b4fe}
+.match-choice.match-correct{background:#d1fae5;border-color:#34d399;color:#065f46;opacity:1}
+.match-choice.match-error{background:#fee2e2;border-color:#f87171;color:#991b1b}
+.match-choice:disabled{opacity:1;cursor:default}
+.match-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:visible}
+.match-lines line{stroke-linecap:round;stroke-width:8;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
+.match-lines .line-good{stroke:#10b981}
+.match-lines .line-bad{stroke:#ef4444;stroke-dasharray:12 8}
+.match-complete{background:#d1fae5;border:3px solid #34d399;border-radius:20px;padding:18px;text-align:center;font-weight:900;font-size:1.2rem;color:#065f46;animation:popIn .4s cubic-bezier(0.175, 0.885, 0.32, 1.275)}
+
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes popIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+@keyframes successPulse{50%{transform:scale(1.03)}}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+@keyframes scorePop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+@keyframes floatUp{to{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <section class="panel" id="screen" aria-live="polite"></section>
+</main>
+<button id="soundToggle" class="sound-toggle" onclick="toggleSound()" aria-pressed="true">🔊 Suara ON</button>
+
+<script>
 "use strict";
 const items=[["🍎","apple"],["🍌","banana"],["🍞","bread"],["🍚","rice"],["🍗","chicken"],["🍦","ice cream"],["💧","water"],["🥛","milk"],["🧃","juice"],["🍵","tea"],["☕","coffee"]];
 const qs=[
@@ -39,7 +180,7 @@ const qs=[
 {kind:"match",prompt:"Match! 🧃 = ...",opts:["Juice","Tea","Milk"],correct:0,explain:"Juice artinya jus."},
 {kind:"listen",audio:"I don't like bananas.",prompt:"Listen. Which sentence did you hear?",opts:["I like bananas.","I don't like apples.","I don't like bananas."],correct:2,explain:"I don't like bananas = saya tidak suka pisang."}
 ];
-let page=0,name="",qIndex=0,score=0,attempts=0,locked=false,chosen=-1,said=false,reflection="",speechStatus="",matchPicked=-1,matchSolved=[],matchStep=0,matchError=null,matchTimer=null;
+let page=0,name="Qiandra Almaheerah Samir",qIndex=0,score=0,attempts=0,locked=false,chosen=-1,said=false,reflection="",speechStatus="",matchPicked=-1,matchSolved=[],matchStep=0,matchError=null,matchTimer=null;
 const el=document.getElementById("screen");const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const button=(label,fn,cl="")=>`<button class="${cl}" onclick="${escapeHtml(fn)}">${label}</button>`;
 function tts(t){if(!soundEnabled)return;if(!("speechSynthesis" in window)){alert("Perangkat ini tidak mendukung suara otomatis.");return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.76;u.pitch=1.08;speechSynthesis.speak(u)}
@@ -49,7 +190,7 @@ function speech(text){said=true;document.getElementById("speakingText").textCont
 function microphone(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){speechStatus="🎤 Pengenalan suara belum didukung browser ini. Tetap ucapkan kalimatmu dan minta guru/teman menyimak.";render();return}
 const target=document.getElementById("speakingText").textContent;if(target.includes("...")){speechStatus="Pilih kalimat terlebih dahulu.";render();return}
 let r=new SR();r.lang="en-US";r.interimResults=false;r.maxAlternatives=1;r.onresult=e=>{const heard=e.results[0][0].transcript;const normalize=s=>s.toLowerCase().replace(/[^\w\s]/g,"").trim();speechStatus=normalize(heard)===normalize(target)?`🌟 Excellent! I heard: "${heard}"`:`💪 I heard: "${heard}". Coba ulangi: "${target}"`;render()};r.onerror=e=>{speechStatus="Mikrofon tidak tersedia atau izin ditolak. Kamu tetap bisa latihan bersama guru.";render()};try{r.start()}catch(e){speechStatus="Mikrofon tidak bisa dimulai.";render()}}
-// Suara efek dibuat langsung di browser, tanpa file audio eksternal.
+
 let audioCtx=null,soundEnabled=true;
 function toggleSound(){soundEnabled=!soundEnabled;const b=document.getElementById("soundToggle");if(b){b.textContent=soundEnabled?"🔊 Suara ON":"🔇 Suara OFF";b.setAttribute("aria-pressed",String(soundEnabled))}if(!soundEnabled&&"speechSynthesis" in window)speechSynthesis.cancel();else if(soundEnabled)soundCorrect()}
 function praise(text){if(!soundEnabled||!("speechSynthesis" in window))return;setTimeout(()=>{if(!soundEnabled)return;const u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.9;u.pitch=1.17;speechSynthesis.cancel();speechSynthesis.speak(u)},360)}
@@ -68,7 +209,7 @@ function playNotes(notes,kind="sine"){
    osc.connect(gain);gain.connect(audioCtx.destination);osc.start(at);osc.stop(at+duration+.01);
    at+=duration*.87;
   }
- }catch(e){/* Game tetap berjalan jika audio tidak didukung. */}
+ }catch(e){}
 }
 function soundCorrect(){playNotes([[523,.13],[659,.13],[784,.23]],"sine")}
 function soundWrong(){playNotes([[330,.17],[247,.24]],"triangle")}
@@ -80,25 +221,41 @@ function resetMatch(){if(matchTimer)clearTimeout(matchTimer);matchTimer=null;mat
 function choosePicture(i){if(matchSolved.includes(i))return;if(matchTimer)clearTimeout(matchTimer);matchError=null;matchPicked=i;speechStatus="Sekarang pilih kata yang sesuai di kanan!";render()}
 function chooseWord(i){if(matchSolved.includes([2,0,1].indexOf(i)))return;if(matchPicked<0){speechStatus="Pilih gambar di kiri dahulu!";render();return}const pic=matchPicked;if(i===[2,0,1][pic]){matchSolved.push(pic);matchPicked=-1;matchError=null;speechStatus=matchSolved.length===3?"🎉 Excellent! Semua pasangan benar!":"✅ Correct! Garis hijau menunjukkan jawaban benar.";soundCorrect();render();setTimeout(()=>{if(page===45)tts(["Apple","Milk","Banana"][pic])},700);if(matchSolved.length===3){setTimeout(()=>{if(page===45){soundResult();render()}},1600)}}else{matchError={picture:pic,word:i};matchPicked=-1;speechStatus="❌ Try again! Garis merah menunjukkan jawaban salah.";soundWrong();praise("Try again!");render();if(matchTimer)clearTimeout(matchTimer);matchTimer=setTimeout(()=>{matchError=null;matchTimer=null;if(page===45)render()},1100)}}
 function drawMatchLines(){const board=document.getElementById("matchBoard"),svg=document.getElementById("matchLines");if(!board||!svg)return;const bounds=board.getBoundingClientRect();svg.setAttribute("viewBox",`0 0 ${bounds.width} ${bounds.height}`);svg.innerHTML="";function line(pic,word,good){const a=board.querySelector(`[data-pic="${pic}"]`),b=board.querySelector(`[data-word="${word}"]`);if(!a||!b)return;const ar=a.getBoundingClientRect(),br=b.getBoundingClientRect(),x1=ar.right-bounds.left,y1=ar.top+ar.height/2-bounds.top,x2=br.left-bounds.left,y2=br.top+br.height/2-bounds.top;const l=document.createElementNS("http://www.w3.org/2000/svg","line");for(const [k,v] of Object.entries({x1,y1,x2,y2}))l.setAttribute(k,v);l.setAttribute("class",good?"line-good":"line-bad");svg.appendChild(l)}matchSolved.forEach(i=>line(i,[2,0,1][i],true));if(matchError)line(matchError.picture,matchError.word,false)}
+
 function render(){
 let h="";
-if(page===0)h=`<div class="center"><p style="font-size:.85rem;font-weight:800;color:#5c459a">✨ VERSI BARU • AUDIO & MATCHING V2 • 07 NOV 2026</p><span class="tag">🎧 Listening & Speaking • Bahasa Inggris Kelas 3 SD</span><div class="hero">🍎 🥛 🍌</div><h1>FOOD FUN!</h1><h2>I Like It! 💖 I Don't Like It! 🙅</h2><p>Let's listen, speak, and play!</p><p>Nama murid: <input id="studentName" aria-label="Nama murid" value="${escapeHtml(name)}" placeholder="Tulis namamu"></p><h2>🌈 Explore & Learn</h2><div class="menu-grid"><button class="menu-card blue" onclick="name=document.getElementById('studentName').value.trim();info(1)">🎯<br>Tujuan</button><button class="menu-card yellow" onclick="name=document.getElementById('studentName').value.trim();info(9)">🎮<br>Panduan</button><button class="menu-card pink" onclick="name=document.getElementById('studentName').value.trim();info(10)">📚<br>Materi Inti</button><button class="menu-card green" onclick="name=document.getElementById('studentName').value.trim();info(11)">📝<br>Evaluasi</button></div>${button("▶ MULAI PETUALANGAN!","name=document.getElementById('studentName').value.trim();navigate(1)","start-button")}</div>`;
-if(page===9)h=`<span class="tag">🎮 Panduan Bermain</span><h1>How to Play? 🚀</h1><div class="cards"><div class="tile"><span class="icon">👆</span><strong>1. Pilih & Sentuh</strong>Ketuk gambar makanan atau minuman untuk mendengar kosakatanya.</div><div class="tile"><span class="icon">🔊</span><strong>2. Listen</strong>Dengarkan contoh pengucapan bahasa Inggris.</div><div class="tile"><span class="icon">🎤</span><strong>3. Speak</strong>Pilih 👍 atau 👎 lalu ucapkan kalimat I like / I don't like.</div><div class="tile"><span class="icon">🧩</span><strong>4. Match</strong>Cocokkan gambar dengan kata yang tepat.</div><div class="tile"><span class="icon">🏆</span><strong>5. Quiz</strong>Jawab 10 soal dan lihat skor belajarmu.</div><div class="tile"><span class="icon">💭</span><strong>6. Reflect</strong>Ceritakan apa yang sudah kamu pelajari.</div></div><p class="feedback">💡 Suara otomatis menggunakan fitur perangkat. Untuk cek mikrofon, gunakan browser yang mendukung dan izinkan akses mikrofon.</p>${nav("home()","navigate(2)","📚 Learn Vocabulary ➜")}`;
-if(page===10)h=`<span class="tag">📚 Materi Inti</span><h1>Food and Drinks 🍓🥤</h1><p>Belajar nama makanan dan minuman, lalu ceritakan yang kamu suka dan tidak suka!</p><div class="cards"><button class="tile" onclick="navigate(2)"><span class="icon">🍎🍞</span><strong>Vocabulary</strong>Ketuk gambar dan dengarkan kata.</button><button class="tile" onclick="navigate(3)"><span class="icon">👍👎</span><strong>Like & Dislike</strong>I like... / I don't like...</button><button class="tile" onclick="navigate(4)"><span class="icon">🎤</span><strong>Speaking Practice</strong>Ucapkan kalimatmu sendiri.</button></div><div class="feedback"><b>Sentence patterns:</b><br>👍 I like apples. = Saya suka apel.<br>👎 I don't like milk. = Saya tidak suka susu.<br>❓ Do you like bananas? = Apakah kamu suka pisang?<br>✅ Yes, I do. / ❌ No, I don't.</div>${nav("home()","navigate(2)","🔊 Explore Words ➜")}`;
-if(page===11)h=`<span class="tag">📝 Evaluasi</span><h1>Show What You Know! 🌟</h1><p>Siap menguji kemampuanmu?</p><div class="cards"><div class="tile"><span class="icon">🎧</span><strong>Listening</strong>Dengarkan lalu pilih jawaban.</div><div class="tile"><span class="icon">🍌</span><strong>Vocabulary</strong>Kenali makanan dan minuman.</div><div class="tile"><span class="icon">👍👎</span><strong>Like & Dislike</strong>Pilih kalimat yang sesuai.</div><div class="tile"><span class="icon">🏆</span><strong>10 Questions</strong>Setiap jawaban benar mendapat 1 poin.</div></div><div class="center">${button("🚀 MULAI EVALUASI","startQuiz()","start-button")}</div>${nav("home()","navigate(10)","📚 Review Material ➜")}`;
-if(page===1)h=`<span class="tag">🎯 Learning Objectives</span><h1>Today I Can...</h1><div class="cards"><div class="tile"><span class="icon">🍎</span>Mengidentifikasi kosakata makanan dan minuman</div><div class="tile"><span class="icon">🎧</span>Memahami ungkapan suka dan tidak suka</div><div class="tile"><span class="icon">🎤</span>Mengungkapkan rasa suka (<b>like</b>) dan tidak suka (<b>dislike</b>) terhadap makanan atau minuman tertentu</div></div>${nav("home()","navigate(9)","🎮 Panduan ➜")}`;
-if(page===2)h=`<span class="tag">📚 Vocabulary</span><h1>Food & Drinks</h1><p>Tap each picture and listen! 🔊</p><div class="cards">${items.map(([emoji,word])=>`<button class="tile" onclick="tts('${word}')"><span class="icon">${emoji}</span><strong>${word}</strong>🔊 Listen</button>`).join("")}</div>${nav("navigate(1)","navigate(3)")}`;
-if(page===3)h=`<span class="tag">💬 Learn the Sentences</span><h1>Let's Say It!</h1><div class="cards"><div class="tile"><span class="icon">👍 🍎</span><p class="big">I like apples.</p><p>Saya suka apel.</p>${button("🔊 Listen","tts('I like apples.')","green")}</div><div class="tile"><span class="icon">👎 ☕</span><p class="big">I don't like coffee.</p><p>Saya tidak suka kopi.</p>${button("🔊 Listen",`tts(${JSON.stringify("I don't like coffee.")})`,"green")}</div></div><p>💡 <b>I like...</b> = Saya suka...<br>💡 <b>I don't like...</b> = Saya tidak suka...</p>${nav("navigate(2)","navigate(4)")}`;
-if(page===4)h=`<span class="tag">🎤 Speaking Challenge</span><h1>Speak Up!</h1><p>Pilih gambar, tekan 👍 atau 👎, dengarkan, lalu ucapkan dengan suara keras.</p><div class="cards">${items.slice(0,8).map(([e,w])=>`<div class="tile"><span class="icon">${e}</span><strong>${w}</strong><div class="pair">${button("👍 Like",`speech('I like ${w}.')`,"green")}${button("👎 Don't like",`speech(${JSON.stringify("I don't like "+w+".")})`,"pink")}</div></div>`).join("")}</div><div class="center"><p id="speakingText" class="big">${escapeHtml(window.lastSpeaking||"I like... / I don't like...")}</p>${button("🎙️ Check My Speaking","microphone()","blue")}<p class="muted">Pengenalan suara opsional: biasanya memerlukan HTTPS, izin mikrofon, dan browser yang mendukung. Jika tidak tersedia, guru/teman menyimak.</p><div class="feedback">${escapeHtml(speechStatus||"Listen • Repeat • Speak!")}</div></div><div class="actions">${button("⬅ Back","navigate(3)","pink")}${button("🏠 Home","home()","yellow")}<button id="nextSpeaking" class="green" onclick="navigate(45)" ${said?"":"disabled"}>🎲 Matching Game ➜</button></div>`;
-if(page===45){const pics=["🍎","🥛","🍌"],words=["milk","banana","apple"],solvedWords=matchSolved.map(i=>[2,0,1][i]);h=`<span class="tag">🧩 Matching Game</span><h1>🔗 Connect the Pairs!</h1><p>1. Ketuk gambar di kiri. 2. Ketuk kata di kanan. Garis <b style="color:#15803d">hijau = benar ✓</b>, <b style="color:#dc2626">merah = salah ✗</b>.</p><div id="matchBoard" class="match-board"><svg id="matchLines" class="match-lines" aria-hidden="true"></svg><div class="match-column"><h2>🖼️ Pictures</h2>${pics.map((e,i)=>`<button type="button" data-pic="${i}" class="match-choice match-picture ${matchPicked===i?"match-active":""} ${matchSolved.includes(i)?"match-correct":""} ${matchError&&matchError.picture===i?"match-error":""}" onclick="choosePicture(${i})" ${matchSolved.includes(i)?"disabled":""}>${e}${matchSolved.includes(i)?'<small>✓ Correct</small>':''}</button>`).join("")}</div><div class="match-column"><h2>🔤 Words</h2>${words.map((w,i)=>`<button type="button" data-word="${i}" class="match-choice match-word ${solvedWords.includes(i)?"match-correct":""} ${matchError&&matchError.word===i?"match-error":""}" onclick="chooseWord(${i})" ${solvedWords.includes(i)?"disabled":""}>${w}${solvedWords.includes(i)?' ✓':''}</button>`).join("")}</div></div><div class="feedback feedback-pop" aria-live="polite">${escapeHtml(speechStatus||"Pilih gambar terlebih dahulu!")}</div>${matchSolved.length===3?`<div class="match-complete">🎉 🌟 Fantastic! All pairs matched! 🌟 🎉</div>`:""}<p><b>Pasangan benar: ${matchSolved.length}/3</b></p><div class="actions">${button("⬅ Back","navigate(4)","pink")}${button("🔄 Reset","resetMatch()","yellow")}${button("🧩 Start Quiz ➜","startQuiz()","green")}</div>`;}
-if(page===5){let q=qs[qIndex],wrong=chosen>=0&&chosen!==q.correct;h=`<span class="tag">🧩 Quiz ${qIndex+1}/10 • ${q.kind.toUpperCase()}</span><div class="bar"><div style="width:${(qIndex+1)*10}%"></div></div><h2>${q.prompt}</h2>${q.audio?`<p>${button("🔊 PLAY AUDIO","tts(qs[qIndex].audio)","yellow")} <span class="muted">Dengarkan kalimatnya.</span></p>`:""}<div class="answers">${q.opts.map((o,i)=>`<button class="${locked&&i===q.correct?"good":wrong&&i===chosen?"bad":""}" onclick="pick(${i})" ${locked?"disabled":""}>${String.fromCharCode(65+i)}. ${o}</button>`).join("")}</div>${chosen>=0?`<div class="feedback feedback-pop">${locked?"🌟 Excellent! Well done!":"💪 Good try! "+q.explain+" Pilih lagi, ya!"}${locked?`<p class="muted">${q.explain}</p>`:""}</div>`:"<p class='muted'>Pilih jawaban yang paling tepat.</p>"}${locked?`<div class="actions">${button(qIndex===9?"🏆 See My Result":"Next Question ➜","nextQ()","green")}</div>`:""}`;}
-if(page===6)h=`<div class="center"><span class="tag">🏆 Quiz Result</span><div class="hero">${score>=8?"🏆":"🌈"}</div><div class="celebration" aria-hidden="true">🎊 ✨ 🎉 ⭐ 🎊</div><h1>Great Job${name?", "+escapeHtml(name):""}!</h1><div class="result-card"><p class="score-total">NILAI AKHIR / FINAL SCORE</p><div class="score-display" aria-label="Nilai ${score*10} dari 100">${score*10}</div><p class="score-total">${score} dari ${qs.length} jawaban benar</p><p>${score>=8?"🌟 Amazing! You did it!":score>=5?"👏 Good effort! Keep practicing!":"💪 Keep trying! You can do it!"}</p>${button("🔊 Putar Suara Hasil","soundResult()","blue")}</div><div class="actions">${button("🏠 Ke Beranda","home()","green")}${button("🔁 Ulangi Kuis","startQuiz()","yellow")}${button("💭 Refleksi","navigate(7)","pink")}</div></div>`;
-if(page===7)h=`<span class="tag">💭 Reflection</span><h1>How Do You Feel?</h1><div class="cards">${[["😊","I understand!"],["😐","I need more practice."],["🙋","I need help."]].map(([e,w])=>`<button class="tile" onclick="reflection=${JSON.stringify(w)};render()"><span class="icon">${e}</span>${w}</button>`).join("")}</div><div class="feedback">${reflection?"Thank you! "+escapeHtml(reflection):"Choose your feeling!"}</div><h2>Say it one more time!</h2><p class="big">I like ______.<br>I don't like ______.</p>${nav("navigate(6)","navigate(8)")}`;
-if(page===8)h=`<div class="center"><span class="tag">🎉 Finished!</span><div class="hero">🌟 🎈 🍓</div><h1>YOU DID IT!</h1><p class="big">Keep Learning English and Have Fun!</p><p>Hebat! Kamu sudah mendengar, berbicara, dan berlatih.</p>${button("🏠 Play Again","said=false;speechStatus='';reflection='';home()","green")}</div>`;
+if(page===0)h=`<div class="center"><p style="font-size:.85rem;font-weight:800;color:var(--purple)">✨ KARYA SPESIAL UNTUK: QIANDRA ALMAHEERAH SAMIR</p><span class="tag">🎧 Listening & Speaking • Bahasa Inggris SD</span><div class="hero">🍎 🥛 🍌</div><h1>FOOD FUN!</h1><h2>I Like It! 💖 I Don't Like It! 🙅</h2><p>Let's listen, speak, and play together!</p><div style="max-width:400px;margin:20px auto"><p style="margin-bottom:8px;font-weight:700">Pemain / Siswa:</p><input id="studentName" aria-label="Nama murid" value="${escapeHtml(name)}" placeholder="Tulis namamu di sini..."></div><h2>🌈 Menu Petualangan</h2><div class="menu-grid"><button class="menu-card blue" onclick="name=document.getElementById('studentName').value.trim();info(1)">🎯<br>Tujuan</button><button class="menu-card yellow" onclick="name=document.getElementById('studentName').value.trim();info(9)">🎮<br>Panduan</button><button class="menu-card pink" onclick="name=document.getElementById('studentName').value.trim();info(10)">📚<br>Materi Inti</button><button class="menu-card green" onclick="name=document.getElementById('studentName').value.trim();info(11)">📝<br>Evaluasi</button></div>${button("▶ MULAI PETUALANGAN!","name=document.getElementById('studentName').value.trim();navigate(1)","start-button")}</div>`;
+
+else if(page===9)h=`<span class="tag">🎮 Panduan Bermain</span><h1>How to Play? 🚀</h1><div class="cards"><div class="tile"><span class="icon">👆</span><strong>1. Pilih & Sentuh</strong>Ketuk gambar makanan atau minuman untuk mendengar kosakatanya.</div><div class="tile"><span class="icon">🔊</span><strong>2. Listen</strong>Dengarkan contoh pengucapan bahasa Inggris.</div><div class="tile"><span class="icon">🎤</span><strong>3. Speak</strong>Pilih 👍 atau 👎 lalu ucapkan kalimat I like / I don't like.</div><div class="tile"><span class="icon">🧩</span><strong>4. Match</strong>Cocokkan gambar dengan kata yang tepat.</div><div class="tile"><span class="icon">🏆</span><strong>5. Quiz</strong>Jawab 10 soal dan lihat skor belajarmu.</div><div class="tile"><span class="icon">💭</span><strong>6. Reflect</strong>Ceritakan apa yang sudah kamu pelajari.</div></div><p class="feedback">💡 Suara otomatis menggunakan fitur perangkat. Untuk cek mikrofon, gunakan browser yang mendukung dan izinkan akses mikrofon.</p>${nav("home()","navigate(2)","📚 Learn Vocabulary ➜")}`;
+
+else if(page===10)h=`<span class="tag">📚 Materi Inti</span><h1>Food and Drinks 🍓🥤</h1><p>Belajar nama makanan dan minuman, lalu ceritakan yang kamu suka dan tidak suka!</p><div class="cards"><button class="tile" onclick="navigate(2)"><span class="icon">🍎🍞</span><strong>Vocabulary</strong>Ketuk gambar & dengarkan.</button><button class="tile" onclick="navigate(3)"><span class="icon">👍👎</span><strong>Like & Dislike</strong>I like... / I don't like...</button><button class="tile" onclick="navigate(4)"><span class="icon">🎤</span><strong>Speaking Practice</strong>Ucapkan kalimatmu sendiri.</button></div><div class="feedback"><b>Sentence patterns:</b><br>👍 I like apples. = Saya suka apel.<br>👎 I don't like milk. = Saya tidak suka susu.<br>❓ Do you like bananas? = Apakah kamu suka pisang?<br>✅ Yes, I do. / ❌ No, I don't.</div>${nav("home()","navigate(2)","🔊 Explore Words ➜")}`;
+
+else if(page===11)h=`<span class="tag">📝 Evaluasi</span><h1>Show What You Know! 🌟</h1><p>Siap menguji kemampuanmu dalam kuis interaktif?</p><div class="cards"><div class="tile"><span class="icon">🎧</span><strong>Listening</strong>Dengarkan lalu pilih jawaban.</div><div class="tile"><span class="icon">🍌</span><strong>Vocabulary</strong>Kenali makanan dan minuman.</div><div class="tile"><span class="icon">👍👎</span><strong>Like & Dislike</strong>Pilih kalimat yang sesuai.</div><div class="tile"><span class="icon">🏆</span><strong>10 Questions</strong>Dapatkan nilai terbaikmu!</div></div><div class="center" style="margin-top:20px">${button("🚀 MULAI EVALUASI","startQuiz()","start-button")}</div>${nav("home()","navigate(10)","📚 Review Material ➜")}`;
+
+else if(page===1)h=`<span class="tag">🎯 Learning Objectives</span><h1>Today I Can...</h1><div class="cards"><div class="tile"><span class="icon">🍎</span>Mengidentifikasi kosakata makanan dan minuman</div><div class="tile"><span class="icon">🎧</span>Memahami ungkapan suka dan tidak suka</div><div class="tile"><span class="icon">🎤</span>Mengungkapkan rasa suka (<b>like</b>) dan tidak suka (<b>dislike</b>)</div></div>${nav("home()","navigate(9)","🎮 Panduan ➜")}`;
+
+else if(page===2)h=`<span class="tag">📚 Vocabulary</span><h1>Food & Drinks</h1><p>Tap each picture and listen! 🔊</p><div class="cards">${items.map(([emoji,word])=>`<button class="tile" onclick="tts('${word}')"><span class="icon">${emoji}</span><strong>${word}</strong>🔊 Listen</button>`).join("")}</div>${nav("navigate(1)","navigate(3)")}`;
+
+else if(page===3)h=`<span class="tag">💬 Learn the Sentences</span><h1>Let's Say It!</h1><div class="cards"><div class="tile" style="grid-column: span 1"><span class="icon">👍 🍎</span><p class="big">I like apples.</p><p>Saya suka apel.</p>${button("🔊 Listen","tts('I like apples.')","green")}</div><div class="tile" style="grid-column: span 1"><span class="icon">👎 ☕</span><p class="big">I don't like coffee.</p><p>Saya tidak suka kopi.</p>${button("🔊 Listen",`tts(${JSON.stringify("I don't like coffee.")})`,"green")}</div></div><div class="feedback">💡 <b>I like...</b> = Saya suka...<br>💡 <b>I don't like...</b> = Saya tidak suka...</div>${nav("navigate(2)","navigate(4)")}`;
+
+else if(page===4)h=`<span class="tag">🎤 Speaking Challenge</span><h1>Speak Up!</h1><p>Pilih gambar, tekan 👍 atau 👎, dengarkan, lalu ucapkan dengan suara keras.</p><div class="cards">${items.slice(0,8).map(([e,w])=>`<div class="tile"><span class="icon">${e}</span><strong>${w}</strong><div class="pair">${button("👍 Like",`speech('I like ${w}.')`,"green")}${button("👎 Don't like",`speech(${JSON.stringify("I don't like "+w+".")})`,"pink")}</div></div>`).join("")}</div><div class="center" style="background:#f8fafc;padding:24px;border-radius:24px;margin-top:20px"><p id="speakingText" class="big" style="margin-top:0">${escapeHtml(window.lastSpeaking||"I like... / I don't like...")}</p>${button("🎙️ Check My Speaking","microphone()","blue")}<p class="muted" style="margin-top:12px">Pengenalan suara opsional: biasanya memerlukan HTTPS dan izin mikrofon.</p><div class="feedback" style="margin-bottom:0">${escapeHtml(speechStatus||"Listen • Repeat • Speak!")}</div></div><div class="actions">${button("⬅ Back","navigate(3)","pink")}${button("🏠 Home","home()","yellow")}<button id="nextSpeaking" class="green" onclick="navigate(45)" ${said?"":"disabled"}>🎲 Matching Game ➜</button></div>`;
+
+else if(page===45){const pics=["🍎","🥛","🍌"],words=["milk","banana","apple"],solvedWords=matchSolved.map(i=>[2,0,1][i]);h=`<span class="tag">🧩 Matching Game</span><h1>🔗 Connect the Pairs!</h1><p>1. Ketuk gambar di kiri. 2. Ketuk kata di kanan. Garis <b style="color:#10b981">hijau = benar ✓</b>, <b style="color:#ef4444">merah = salah ✗</b>.</p><div id="matchBoard" class="match-board"><svg id="matchLines" class="match-lines" aria-hidden="true"></svg><div class="match-column"><h2>🖼️ Pictures</h2>${pics.map((e,i)=>`<button type="button" data-pic="${i}" class="match-choice match-picture ${matchPicked===i?"match-active":""} ${matchSolved.includes(i)?"match-correct":""} ${matchError&&matchError.picture===i?"match-error":""}" onclick="choosePicture(${i})" ${matchSolved.includes(i)?"disabled":""}>${e}${matchSolved.includes(i)?'<small>✓ Correct</small>':''}</button>`).join("")}</div><div class="match-column"><h2>🔤 Words</h2>${words.map((w,i)=>`<button type="button" data-word="${i}" class="match-choice match-word ${solvedWords.includes(i)?"match-correct":""} ${matchError&&matchError.word===i?"match-error":""}" onclick="chooseWord(${i})" ${solvedWords.includes(i)?"disabled":""}>${w}${solvedWords.includes(i)?' ✓':''}</button>`).join("")}</div></div><div class="feedback feedback-pop" aria-live="polite">${escapeHtml(speechStatus||"Pilih gambar terlebih dahulu!")}</div>${matchSolved.length===3?`<div class="match-complete" style="margin-bottom:16px">🎉 🌟 Fantastic! All pairs matched! 🌟 🎉</div>`:""}<p style="font-weight:700">Pasangan benar: ${matchSolved.length}/3</p><div class="actions">${button("⬅ Back","navigate(4)","pink")}${button("🔄 Reset","resetMatch()","yellow")}${button("🧩 Start Quiz ➜","startQuiz()","green")}}`;}
+
+else if(page===5){let q=qs[qIndex],wrong=chosen>=0&&chosen!==q.correct;h=`<span class="tag">🧩 Quiz ${qIndex+1}/10 • ${q.kind.toUpperCase()}</span><div class="bar"><div style="width:${(qIndex+1)*10}%"></div></div><h2>${q.prompt}</h2>${q.audio?`<p>${button("🔊 PLAY AUDIO","tts(qs[qIndex].audio)","yellow")} <span class="muted">Dengarkan kalimatnya.</span></p>`:""}<div class="answers">${q.opts.map((o,i)=>`<button class="${locked&&i===q.correct?"good":wrong&&i===chosen?"bad":""}" onclick="pick(${i})" ${locked?"disabled":""}>${String.fromCharCode(65+i)}. ${o}</button>`).join("")}</div>${chosen>=0?`<div class="feedback feedback-pop">${locked?"🌟 Excellent! Well done!":"💪 Good try! "+q.explain+" Pilih lagi, ya!"}${locked?`<p class="muted">${q.explain}</p>`:""}</div>`:"<p class='muted'>Pilih jawaban yang paling tepat.</p>"}${locked?`<div class="actions">${button(qIndex===9?"🏆 See My Result":"Next Question ➜","nextQ()","green")}</div>`:""}`;}
+
+else if(page===6)h=`<div class="center"><span class="tag">🏆 Quiz Result</span><div class="hero">${score>=8?"🏆":"🌈"}</div><div class="celebration" aria-hidden="true">🎊 ✨ 🎉 ⭐ 🎊</div><h1>Hebat Sekali, ${escapeHtml(name)}!</h1><div class="result-card"><p class="score-total">NILAI AKHIR / FINAL SCORE</p><div class="score-display" aria-label="Nilai ${score*10} dari 100">${score*10}</div><p class="score-total">${score} dari ${qs.length} jawaban benar</p><p style="margin-top:12px">${score>=8?"🌟 Amazing! You did it!":score>=5?"👏 Good effort! Keep practicing!":"💪 Keep trying! You can do it!"}</p><div style="margin-top:16px">${button("🔊 Putar Suara Hasil","soundResult()","blue")}</div></div><div class="actions" style="justify-content:center">${button("🏠 Ke Beranda","home()","green")}${button("🔁 Ulangi Kuis","startQuiz()","yellow")}${button("💭 Refleksi","navigate(7)","pink")}</div></div>`;
+
+else if(page===7)h=`<span class="tag">💭 Reflection</span><h1>How Do You Feel?</h1><div class="cards">${[["😊","I understand!"],["😐","I need more practice."],["🙋","I need help."]].map(([e,w])=>`<button class="tile" onclick="reflection=${JSON.stringify(w)};render()"><span class="icon">${e}</span>${w}</button>`).join("")}</div><div class="feedback">${reflection?"Thank you! "+escapeHtml(reflection):"Choose your feeling!"}</div><h2>Say it one more time!</h2><p class="big">I like ______.<br>I don't like ______.</p>${nav("navigate(6>","navigate(8)")}`;
+
+else if(page===8)h=`<div class="center"><span class="tag">🎉 Finished!</span><div class="hero">🌟 🎈 🍓</div><h1>YOU DID IT, QIANDRA!</h1><p class="big">Keep Learning English and Have Fun!</p><p>Hebat! Kamu sudah mendengar, berbicara, dan berlatih dengan sangat baik.</p><div style="margin-top:20px">${button("🏠 Play Again","said=false;speechStatus='';reflection='';home()","green")}</div></div>`;
+
 el.innerHTML=h;
 if(page===45)requestAnimationFrame(drawMatchLines);
 if(page===4){const st=document.getElementById("speakingText");if(st&&window.lastSpeaking)st.textContent=window.lastSpeaking;}
 }
 const originalSpeech=speech;speech=function(t){window.lastSpeaking=t;originalSpeech(t)};
 render();
-</script></body></html>
+</script>
+</body>
+</html>
